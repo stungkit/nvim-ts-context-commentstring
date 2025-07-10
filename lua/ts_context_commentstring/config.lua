@@ -80,6 +80,7 @@ M.config = {
     lua = { __default = '-- %s', __multiline = '--[[ %s ]]' },
     nix = { __default = '# %s', __multiline = '/* %s */' },
     php = { __default = '// %s', __multiline = '/* %s */' },
+    powershell = { __default = "# %s", __multiline = "<# %s #>" },
     python = { __default = '# %s', __multiline = '""" %s """' },
     rego = '# %s',
     rescript = { __default = '// %s', __multiline = '/* %s */' },

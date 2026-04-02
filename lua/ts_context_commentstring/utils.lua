@@ -57,9 +57,9 @@ function M.is_treesitter_active(bufnr)
   bufnr = bufnr or 0
 
   -- get_parser will throw an error if Treesitter is not set up for the buffer
-  local ok, _ = pcall(vim.treesitter.get_parser, bufnr)
+  local ok, parser = pcall(vim.treesitter.get_parser, bufnr)
 
-  return ok
+  return ok and parser ~= nil
 end
 
 ---Get the node that is on the given location (default first non-whitespace

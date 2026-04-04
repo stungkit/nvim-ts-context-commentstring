@@ -67,6 +67,7 @@ M.config = {
     cpp = { __default = '// %s', __multiline = '/* %s */' },
     css = '/* %s */',
     cue = '// %s',
+    c_sharp = { __default = '// %s', __multiline = '/* %s */' },
     gleam = '// %s',
     glimmer = '{{! %s }}',
     go = { __default = '// %s', __multiline = '/* %s */' },

@@ -56,7 +56,8 @@ end
 function M.is_treesitter_active(bufnr)
   bufnr = bufnr or 0
 
-  -- get_parser will throw an error if Treesitter is not set up for the buffer
+  -- Compat Neovim < 0.12: vim.treesitter.get_parser throws an error if
+  -- Treesitter is not set up for the buffer. Neovim 0.12 returns nil.
   local ok, parser = pcall(vim.treesitter.get_parser, bufnr)
 
   return ok and parser ~= nil
